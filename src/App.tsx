@@ -79,9 +79,39 @@ function App() {
   // Адрес: объект с городом (необязательное), страной и улицой (необязательное)
   // Вывести объект в консоль
 
+  type AddrType = {
+    city?: string
+    country: string
+    street?: string
+  }
+
+  type AnimalType = {
+    nickname: string
+    age: number
+    hasCollar: boolean
+    address: AddrType
+  }
+
+  const animal: AnimalType = {
+    nickname: "Nickname",
+    age: 0,
+    hasCollar: false,
+    address: {
+      city: "City",
+      country: "Country",
+      street: "Street"
+    }
+  }
+
+  console.log(animal);
+
+
   // 2. Написать функцию, которая складывает 2 числа
 
   // 3. Написать функцию, на вход которой подаётся массив чисел, функция возвращает сумму всех чисел
+
+
+
 
   return (
     <div className="App">
@@ -90,5 +120,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
